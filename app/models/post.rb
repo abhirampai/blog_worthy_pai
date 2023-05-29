@@ -1,3 +1,4 @@
 class Post < ApplicationRecord
-  validates :title, presence: true
+  MAX_TITLE_LENGTH = 125
+  validates :title, presence: true, length: { maximum: MAX_TITLE_LENGTH }
 end
