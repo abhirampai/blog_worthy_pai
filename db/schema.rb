@@ -14,9 +14,9 @@ ActiveRecord::Schema[7.0].define(version: 2023_05_29_095232) do
   create_table "posts", force: :cascade do |t|
     t.string "title", null: false
     t.text "description"
-    t.integer "upvotes"
-    t.integer "downvotes"
-    t.boolean "is_blog_worthy"
+    t.integer "upvotes", default: 0
+    t.integer "downvotes", default: 0
+    t.boolean "is_blog_worthy", default: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
